@@ -1,0 +1,109 @@
+:root{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    --mainclr: #0096FF;
+    --darkclr: #101010;
+    --darkclr2: #252525;
+    --lightclr: #ddd;
+    --lightclr2: #505050;
+    --whiteclr: #fff;
+    --redclr: #ff0000;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    color: #0096FF;
+    background-color: #101010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transition: all ease 0.2s;
+}
+#todoInput{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.4rem;
+    border: 2px solid;
+    border-color: var(--lightclr);
+}
+.add--to-do{
+    width: 35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.addButton{
+    background-color: var(--mainclr);
+    color: var(--whiteclr);
+    padding: 1.5rem;
+    border-radius: 0.4rem;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+.addButton:hover{
+    background-color: var(--lightclr);
+    color: #0096FF;
+}
+.to-do--list{
+    padding: 1rem;
+    background-color: var(--darkclr2);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 0.8rem;
+    transition: all ease 0.2s;
+}
+.to-do--list--items{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+.to-do--list--items li{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.4rem;
+    border: 2px solid;
+    border-color: var(--lightclr);
+    list-style-type: none;
+    user-select: none;
+    transition: all ease 0.2s;
+}
+.to-do--list--items li:hover{
+    background-color: var(--mainclr);
+    color: var(--whiteclr);
+    border-color: var(--mainclr);
+}
+.checked{
+    background-color: var(--lightclr2);
+    color: var(--lightclr);
+    border-color: var(--lightclr2);
+    text-decoration: line-through;
+}
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+    transition: all ease 0.2s;
+}
+.close:hover{
+    background-color: var(--redclr);
+    color:var(--whiteclr);
+}
+.box{
+    background-color: var(--whiteclr);
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
