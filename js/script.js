@@ -26,11 +26,11 @@ list.addEventListener('click', function(ev) {
 
 function newItem() {
     var li = document.createElement("li");
-    var inputValue = document.getElementById("todoInput");
+    var inputValue = document.getElementById("todoInput").value;
     var t = document.createTextNode(inputValue);
     li.appendChild(t);
     
-    if(inputValue === '') {
+    if(inputValue === '' && inputValue === null) {
         alert("You must write something!")
     } else{
         document.getElementById("toDoList").appendChild(li);
