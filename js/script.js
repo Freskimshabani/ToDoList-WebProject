@@ -30,7 +30,7 @@ function newItem() {
     var t = document.createTextNode(inputValue);
     li.appendChild(t);
     
-    if(inputValue === '' && inputValue === null) {
+    if(inputValue === '' || inputValue === null) {
         alert("You must write something!")
     } else{
         document.getElementById("toDoList").appendChild(li);
